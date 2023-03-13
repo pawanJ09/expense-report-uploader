@@ -1,10 +1,10 @@
-[![Python Lint](https://github.com/pawanJ09/expense-category-delete/actions/workflows/python-lint.yml/badge.svg)](https://github.com/pawanJ09/expense-category-delete/actions/workflows/python-lint.yml)
-[![AWS Lambda Package and Deploy](https://github.com/pawanJ09/expense-category-delete/actions/workflows/aws-lambda-package-deploy.yml/badge.svg)](https://github.com/pawanJ09/expense-category-delete/actions/workflows/aws-lambda-package-deploy.yml)
-[![AWS Lambda Test](https://github.com/pawanJ09/expense-category-delete/actions/workflows/aws-lambda-test.yml/badge.svg)](https://github.com/pawanJ09/expense-category-delete/actions/workflows/aws-lambda-test.yml)
+[![Python Lint](https://github.com/pawanJ09/expense-report-uploader/actions/workflows/python-lint.yml/badge.svg)](https://github.com/pawanJ09/expense-report-uploader/actions/workflows/python-lint.yml)
+[![AWS Lambda Package and Deploy](https://github.com/pawanJ09/expense-report-uploader/actions/workflows/aws-lambda-package-deploy.yml/badge.svg)](https://github.com/pawanJ09/expense-report-uploader/actions/workflows/aws-lambda-package-deploy.yml)
+[![AWS Lambda Test](https://github.com/pawanJ09/expense-report-uploader/actions/workflows/aws-lambda-test.yml/badge.svg)](https://github.com/pawanJ09/expense-report-uploader/actions/workflows/aws-lambda-test.yml)
 
-# Expense Category Delete
+# Expense Report Uploader
 
-This app will delete the provided expense category from DynamoDB.
+This app will upload the user reports to S3 location.
 
 ## Requirements
 
@@ -35,7 +35,7 @@ python ./src/main.py
 ## Trigger AWS Lambda with Test event from cli
 
 ```shell
-aws lambda invoke --function-name expense-category-delete \
+aws lambda invoke --function-name expense-report-uploader \
 --invocation-type RequestResponse \
 --payload file://events/test-agw-event.json \
 --cli-binary-format raw-in-base64-out /dev/stdout
