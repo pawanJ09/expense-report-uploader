@@ -72,4 +72,5 @@ jobs:
         run: |
           aws lambda update-function-configuration --function-name expense-report-uploader \
           --handler main.lambda_handler \
-          --layers arn:aws:lambda:us-east-2:770693421928:layer:Klayers-p39-boto3:12
+          --layers arn:aws:lambda:us-east-2:770693421928:layer:Klayers-p39-boto3:12 \
+          arn:aws:lambda:us-east-2:770693421928:layer:Klayers-p39-requests:10
