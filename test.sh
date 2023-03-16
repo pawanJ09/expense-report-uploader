@@ -8,7 +8,7 @@ echo "$aws_version"
 aws lambda invoke --function-name expense-report-uploader \
 --invocation-type RequestResponse --payload file://events/test-agw-event.json \
 --cli-binary-format raw-in-base64-out /tmp/lambda-response.txt
-error_message=$(grep "errorMessage" /tmp/lambda-response.txt)
+error_message=$(grep "errorMessage\|\"statusCode\": 500" /tmp/lambda-response.txt)
 echo "$error_message"
 
 # Exit if error received from Lambda invocation
